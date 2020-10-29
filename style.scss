@@ -1,0 +1,94 @@
+$font-stack: "Noto Sans JP", sans-serif;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-stack;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.section {
+}
+
+.container {
+  width: 85%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.85em 1.25em;
+  background: linear-gradient(
+    45deg,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c13584,
+    #e1306c,
+    #fd1d1d
+  );
+  color: var(--clr-text, white);
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0.4em;
+  transition: transform 250ms ease-in-out, opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.03);
+  opacity: 0.95;
+  background: lighten;
+}
+
+.primary-title {
+  font-size: 4rem;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+// .section-title {
+// }
+
+.hero {
+  color: white;
+  text-align: center;
+  padding: 15em 0;
+  background: #222;
+
+  @supports (background-blend-mode: multiply) {
+    background: url(/img/hero-bg.png),
+      linear-gradient(
+        45deg,
+        #405de6,
+        #5851db,
+        #833ab4,
+        #c13584,
+        #e1306c,
+        #fd1d1d
+      );
+    background-blend-mode: multiply;
+    background-size: cover;
+  }
+}
